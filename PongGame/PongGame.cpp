@@ -10,6 +10,8 @@
 PongGame::PongGame()
 :mainWindow() {
     mainWindow.create(sf::VideoMode(mainWindowWidth, mainWindowHeight), "Pong");
+    mainWindow.setFramerateLimit(60);
+    mainWindow.setVerticalSyncEnabled(true);
 
     timePerFrame = sf::seconds(1.f / 60.f);
 
