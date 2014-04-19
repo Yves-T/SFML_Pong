@@ -20,7 +20,8 @@ private:
     
     const int mainWindowWidth = 640;
     const int mainWindowHeight = 480;
-    
+    sf::Time timePerFrame;
+
     // rectangles
     sf::RectangleShape topRectangle;
     sf::RectangleShape leftRectangle;

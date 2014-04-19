@@ -9,6 +9,8 @@ PongGame::PongGame()
 :mainWindow() {
     mainWindow.create(sf::VideoMode(mainWindowWidth, mainWindowHeight), "Pong");
 
+    timePerFrame = sf::seconds(1.f / 60.f);
+
     const int borderSize = 30;
 
     topRectangle.setPosition(borderSize, 0);
@@ -28,14 +30,25 @@ PongGame::PongGame()
     setUpBorderRectangle(rightRectangle);
     setUpBorderRectangle(bottomRectangle);
 
-    ballSpeed = sf::Vector2f(0.1, 0.1);
+    ballSpeed = sf::Vector2f(100, 100);
     setUpBall(mainWindowWidth, mainWindowHeight, ball);
 }
 
 void PongGame::run() {
+    sf::Clock clock;
+    sf::Time timeSinceLastUpdate = sf::Time::Zero;
+
     while (mainWindow.isOpen()) {
         processEvents();
-        update();
+        sf::Time elapsedTime = clock.restart();
+        timeSinceLastUpdate += elapsedTime;
+        while (timeSinceLastUpdate > timePerFrame) {
+            timeSinceLastUpdate -= timePerFrame;
+            processEvents();
+            // no matter what happens, give the same  delta time to the update function
+            update();
+        }
+        updateStatistics(elapsedTime);
         render();
     }
 }
@@ -64,7 +77,7 @@ void PongGame::update() {
         ballSpeed.x = -ballSpeed.x;
     }
 
-    ball.move(ballSpeed.x, ballSpeed.y);
+    ball.move(ballSpeed * timePerFrame.asSeconds());
 }
 
 void PongGame::render() {
