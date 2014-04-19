@@ -11,6 +11,7 @@
 		38C88D69894FA48D0DC43108 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 38C8857A78D5664D2B9E767F /* icon.png */; };
 		A3DCBE3B1902410F00BA7022 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE3A1902410F00BA7022 /* ResourcePath.mm */; };
 		A3DCBE3E1902410F00BA7022 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE3D1902410F00BA7022 /* main.cpp */; };
+		A3DCBE4F1902634E00BA7022 /* PongGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE4D1902634E00BA7022 /* PongGame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		A3DCBE3A1902410F00BA7022 /* ResourcePath.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
 		A3DCBE3C1902410F00BA7022 /* ResourcePath.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
 		A3DCBE3D1902410F00BA7022 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A3DCBE4D1902634E00BA7022 /* PongGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PongGame.cpp; sourceTree = "<group>"; };
+		A3DCBE4E1902634E00BA7022 /* PongGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongGame.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 				A3DCBE3A1902410F00BA7022 /* ResourcePath.mm */,
 				A3DCBE3C1902410F00BA7022 /* ResourcePath.hpp */,
 				A3DCBE3D1902410F00BA7022 /* main.cpp */,
+				A3DCBE4D1902634E00BA7022 /* PongGame.cpp */,
+				A3DCBE4E1902634E00BA7022 /* PongGame.h */,
 				A3DCBE3F1902410F00BA7022 /* Resources */,
 				A3DCBE381902410F00BA7022 /* Supporting Files */,
 			);
@@ -161,6 +166,7 @@
 			files = (
 				A3DCBE3E1902410F00BA7022 /* main.cpp in Sources */,
 				A3DCBE3B1902410F00BA7022 /* ResourcePath.mm in Sources */,
+				A3DCBE4F1902634E00BA7022 /* PongGame.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +312,7 @@
 				A3DCBE4C1902410F00BA7022 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
