@@ -12,6 +12,7 @@
 		A3DCBE3B1902410F00BA7022 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE3A1902410F00BA7022 /* ResourcePath.mm */; };
 		A3DCBE3E1902410F00BA7022 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE3D1902410F00BA7022 /* main.cpp */; };
 		A3DCBE4F1902634E00BA7022 /* PongGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE4D1902634E00BA7022 /* PongGame.cpp */; };
+		A3DCBE521902843900BA7022 /* StringHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3DCBE501902843900BA7022 /* StringHelper.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		A3DCBE3D1902410F00BA7022 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A3DCBE4D1902634E00BA7022 /* PongGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PongGame.cpp; sourceTree = "<group>"; };
 		A3DCBE4E1902634E00BA7022 /* PongGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PongGame.h; sourceTree = "<group>"; };
+		A3DCBE501902843900BA7022 /* StringHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StringHelper.cpp; path = ../StringHelper.cpp; sourceTree = "<group>"; };
+		A3DCBE511902843900BA7022 /* StringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringHelper.h; path = ../StringHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 		A3DCBE371902410F00BA7022 /* PongGame */ = {
 			isa = PBXGroup;
 			children = (
+				A3DCBE501902843900BA7022 /* StringHelper.cpp */,
+				A3DCBE511902843900BA7022 /* StringHelper.h */,
 				A3DCBE3A1902410F00BA7022 /* ResourcePath.mm */,
 				A3DCBE3C1902410F00BA7022 /* ResourcePath.hpp */,
 				A3DCBE3D1902410F00BA7022 /* main.cpp */,
@@ -164,6 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3DCBE521902843900BA7022 /* StringHelper.cpp in Sources */,
 				A3DCBE3E1902410F00BA7022 /* main.cpp in Sources */,
 				A3DCBE3B1902410F00BA7022 /* ResourcePath.mm in Sources */,
 				A3DCBE4F1902634E00BA7022 /* PongGame.cpp in Sources */,

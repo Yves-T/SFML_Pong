@@ -27,7 +27,10 @@ private:
     sf::RectangleShape leftRectangle;
     sf::RectangleShape rightRectangle;
     sf::RectangleShape bottomRectangle;
-    
+    sf::Font font;
+    sf::Text statisticsText;
+    sf::Time statisticsUpdateTime;
+    std::size_t statisticsNumberFrames;
     // ball
     sf::RectangleShape ball;
 
@@ -42,6 +45,7 @@ private:
     bool doRectanglesIntersect(const sf::RectangleShape &rectangle1, sf::RectangleShape &rectangle2);
     void setUpBorderRectangle(sf::RectangleShape &topRectangle);
     void setUpBall(int const mainWindowWidth, int const mainWindowHeight, sf::RectangleShape &ball);
+    void updateStatistics(sf::Time elapsedTime);
 };
 
 #endif /* defined(__PongGame__PongGame__) */

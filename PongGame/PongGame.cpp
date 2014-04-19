@@ -4,6 +4,8 @@
 //
 
 #include "PongGame.h"
+#include "ResourcePath.hpp"
+#import "StringHelper.h"
 
 PongGame::PongGame()
 :mainWindow() {
@@ -32,6 +34,15 @@ PongGame::PongGame()
 
     ballSpeed = sf::Vector2f(100, 100);
     setUpBall(mainWindowWidth, mainWindowHeight, ball);
+
+    if (!font.loadFromFile(resourcePath() + "sansation.ttf")) {
+        // handle error here
+    }
+
+    statisticsText.setFont(font);
+    statisticsText.setPosition(5.f, 5.f);
+    statisticsText.setCharacterSize(10);
+    statisticsText.setColor(sf::Color::Black);
 }
 
 void PongGame::run() {
@@ -88,6 +99,8 @@ void PongGame::render() {
     mainWindow.draw(rightRectangle);
     mainWindow.draw(bottomRectangle);
     mainWindow.draw(ball);
+    mainWindow.draw(statisticsText);
+
 
     // Update the window
     mainWindow.display();
@@ -112,4 +125,18 @@ void PongGame::setUpBall(int const mainWindowWidth, int const mainWindowHeight, 
     ball.setFillColor(sf::Color::Red);
     ball.setOutlineColor(sf::Color::Yellow);
     ball.setOutlineThickness(1);
+}
+
+void PongGame::updateStatistics(sf::Time elapsedTime) {
+    statisticsUpdateTime += elapsedTime;
+    statisticsNumberFrames += 1;
+
+    if (statisticsUpdateTime >= sf::seconds(1.0f)) {
+        statisticsText.setString(
+                "Frames / Second = " + toString(statisticsNumberFrames) + "\n" +
+                        "Time / Update = " + toString(statisticsUpdateTime.asMicroseconds() / statisticsNumberFrames) + "us");
+
+        statisticsUpdateTime -= sf::seconds(1.0f);
+        statisticsNumberFrames = 0;
+    }
 }
