@@ -13,11 +13,12 @@
 class PongGame {
 public:
     PongGame();
+
     void run();
-    
+
 private:
     sf::RenderWindow mainWindow;
-    
+
     const int mainWindowWidth = 640;
     const int mainWindowHeight = 480;
     sf::Time timePerFrame;
@@ -27,24 +28,31 @@ private:
     sf::RectangleShape leftRectangle;
     sf::RectangleShape rightRectangle;
     sf::RectangleShape bottomRectangle;
+
     sf::Font font;
     sf::Text statisticsText;
     sf::Time statisticsUpdateTime;
     std::size_t statisticsNumberFrames;
+
     // ball
     sf::RectangleShape ball;
 
     // ball speed
     sf::Vector2f ballSpeed;
-    
+
 private:
     void processEvents();
+
     void update();
+
     void render();
-    
+
     bool doRectanglesIntersect(const sf::RectangleShape &rectangle1, sf::RectangleShape &rectangle2);
+
     void setUpBorderRectangle(sf::RectangleShape &topRectangle);
+
     void setUpBall(int const mainWindowWidth, int const mainWindowHeight, sf::RectangleShape &ball);
+
     void updateStatistics(sf::Time elapsedTime);
 };
 
